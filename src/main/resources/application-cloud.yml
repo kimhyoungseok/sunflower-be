@@ -1,0 +1,11 @@
+cloud:
+  aws:
+    credentials:
+      access-key: ${cloud.aws.credentials.access-key}
+      secret-key: ${cloud.aws.credentials.secret-key}
+    region:
+      static: ap-northeast-2
+    s3:
+      user-bucket : ${cloud.aws.s3.user-bucket}
+      review-img : ${cloud.aws.s3.review-img}
+      restaurant-bucket : ${cloud.aws.s3.restaurant-bucket}

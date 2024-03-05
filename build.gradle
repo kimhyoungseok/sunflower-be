@@ -1,0 +1,47 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.17'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.hamtaro'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '11'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	compileOnly 'org.projectlombok:lombok'
+	implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.12.445'
+	implementation 'net.coobird:thumbnailator:0.4.8'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+	testImplementation 'junit:junit:4.13.1'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2',
+			'io.jsonwebtoken:jjwt-jackson:0.11.2'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.12.445'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

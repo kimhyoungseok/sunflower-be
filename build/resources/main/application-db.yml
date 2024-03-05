@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: ${MARIADB_USERNAME}
+    password: ${MARIADB_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://${MARIADB_URL}/${MARIADB_NAME}?characterEncoding=UTF-8&characterSetResults=UTF-8&serverTimezone=Asia/Seoul&useLegacyDatetimeCode=false

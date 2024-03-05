@@ -1,0 +1,5 @@
+kakao:
+  auth:
+    clientId: ${kakao.auth.clientId}
+    clientSecret: ${kakao.auth.clientSecret}
+    redirectUrl: ${kakao.auth.redirectUrl}

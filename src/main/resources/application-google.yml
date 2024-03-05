@@ -1,0 +1,5 @@
+OAuth2:
+  google:
+    redirect-url: ${OAuth2.google.redirect-url}
+    client-id: ${OAuth2.google.client-id}
+    client-secret: ${OAuth2.google.client-secret}

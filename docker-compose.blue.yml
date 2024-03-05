@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  api:
+    image: taeming/sunflowerplate:latest
+    container_name: sunflowerplate-blue
+    environment:
+      - LANG=ko_KR.UTF-8
+      - HTTP_PORT=9000
+      - TZ:Asia/Seoul
+
+    ports:
+      - '8080:8080'
+
+#networks:
+#  default:
+#    name: service-network
+#    external: true
